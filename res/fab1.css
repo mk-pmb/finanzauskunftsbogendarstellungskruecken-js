@@ -1,0 +1,56 @@
+﻿@charset "UTF-8";
+/* -*- coding: UTF-8, tab-width: 2 -*- */
+
+body, td, th { font-size: 10pt; }
+h3 { font-size: 100%; }
+.smallprint, .smallprint td { font-size: 7pt; }
+h3, p, table, td, th, chapter { margin: 0em; }
+
+[data-unsupported] { color: brown; background-color: lightsalmon; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 2px;
+  padding-right: 2em;
+}
+th { vertical-align: bottom; }
+th:first-child, td:first-child { padding-left: 0px; }
+th:last-child, td:last-child { padding-right: 0px; }
+table, th, td { border-width: 0px; }
+
+table.symbol-legende td:first-child,
+tr.checkbox td:first-child { padding-left: 5px; padding-right: 0.5em; }
+
+tr>.ta-r { text-align: right; }
+
+chapter { display: block; margin-bottom: 2em; }
+
+chapter>.signature {
+  margin-top: 100pt;
+  border-top: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*scroll*/

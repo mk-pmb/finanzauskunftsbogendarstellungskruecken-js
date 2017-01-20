@@ -1,0 +1,27 @@
+{ "name": "finanzauskunftsbogendarstellungskruecken",
+  "version": "0.0.1",
+  "description": "Some JS+CSS magic that help me generate pre-filled printed forms for German bureaucracy.",
+  "keywords": [ "bureaucracy" ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/finanzauskunftsbogendarstellungskruecken-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/finanzauskunftsbogendarstellungskruecken-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/finanzauskunftsbogendarstellungskruecken-js/issues"
+  },
+
+  "private": false, "license": "ISC",
+
+  "main": "fab.js",
+  "scripts": { "test": "nodejs test/all.js" },
+  "directories": { "test": "test" },
+
+  "peerDependencies": { "amdldr16-pmb": "^0.1.9" },
+  "devDependencies": { "equal-pmb": "^0.1.0" },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}

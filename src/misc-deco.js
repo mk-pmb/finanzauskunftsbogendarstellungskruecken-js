@@ -27,17 +27,32 @@ define(function (require) {
 
   EX.applyColumnClassNames = function () {
     kisi.qsa('table[col-cls] tr').forEach(function (tr) {
-      var tbl = tr.parentNode.parentNode, ch = tr.firstElementChild,
-        cls, idx = 0,
+      var tbl = tr.parentNode.parentNode, ch = tr.firstElementChild, idx = 0,
         colCls = kisi.attrStr(tbl, 'col-cls').trim().split(/\s*[\|,]\s*/);
       while (ch) {
-        cls = String(ch.className || '');
-        ch.className = (cls ? cls + ' ' : '') + colCls[idx];
+        kisi.addCls(ch, colCls[idx]);
         ch = ch.nextElementSibling;
         idx += 1;
       }
     });
   };
+
+
+  EX.tableSideAnnot = function tblAnnot(dl) {
+    if (typeof dl === 'string') { return kisi.qsa(dl).forEach(tblAnnot); }
+    var rows = kisi.sub('tbody tr', dl.previousElementSibling), cell;
+    dl.parentNode.removeChild(dl);
+    kisi.addCls(rows[0].lastElementChild, 'last-cell');
+    cell = rows[0].appendChild(kisi.mktag('td'));
+    cell.setAttribute('rowspan', 0);
+    cell.className = 'annot';
+    cell.appendChild(dl);
+  };
+
+
+
+
+
 
 
 

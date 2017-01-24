@@ -15,6 +15,7 @@ define(function (require) {
     require('./src/kv-rows').enchant();
     miscDeco.applyColumnClassNames();
     tabu.warnUnprocSpec();
+    miscDeco.tableSideAnnot('table+dl.symbol-legende');
     require('css!./res/fab1.css');
   };
 

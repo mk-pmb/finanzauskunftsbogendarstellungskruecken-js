@@ -6,6 +6,7 @@ define(function () {
   var EX = {};
 
   EX.qsa = function (s) { return Array.from(document.querySelectorAll(s)); };
+  EX.sub = function (s, base) { return Array.from(base.querySelectorAll(s)); };
   //function mktxt(tx) { return document.createTextNode(tx); }
   EX.mktag = function (tn) { return document.createElement(tn); };
   EX.attrStr = function (el, at) { return String(el.getAttribute(at) || ''); };
@@ -15,6 +16,13 @@ define(function () {
     var val = EX.attrStr(el, at);
     el.removeAttribute(at);
     return val;
+  };
+
+
+  EX.addCls = function (elem, cls) {
+    var old = String(elem.className || '');
+    elem.className = (old ? old + ' ' : '') + cls;
+    return elem;
   };
 
 
@@ -29,6 +37,15 @@ define(function () {
     keys.forEach(function (k, i) { if (k !== null) { d[k] = m[i]; } });
     return d;
   };
+
+
+
+
+
+
+
+
+
 
 
 

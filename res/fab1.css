@@ -1,42 +1,77 @@
 ﻿@charset "UTF-8";
 /* -*- coding: UTF-8, tab-width: 2 -*- */
 
-body, td, th { font-size: 10pt; }
+@page {
+  size: size: A4 portrait;
+  margin: 15mm;
+  marks: crop cross;
+}
+
+body, td, th { font-size: 9pt; }
 h3 { font-size: 100%; }
 .smallprint, .smallprint td { font-size: 7pt; }
 h3, p, table, td, th, chapter { margin: 0em; }
+sup { font-size: 70%; }
 
 [data-unsupported] { color: brown; background-color: lightsalmon; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0px;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  border-spacing: 0;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 
 th, td {
   text-align: left;
   vertical-align: top;
-  padding: 2px;
-  padding-right: 2em;
+  padding: 0.1em;
+  padding-right: 1em;
 }
-th { vertical-align: bottom; }
-th:first-child, td:first-child { padding-left: 0px; }
-th:last-child, td:last-child { padding-right: 0px; }
-table, th, td { border-width: 0px; }
+th { vertical-align: bottom; font-weight: normal; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child, td.last-cell { padding-right: 0; }
+td.annot { padding-left: 1.5em; width: 10%; position: relative; }
+table, th, td { border-width: 0; }
 
 table.symbol-legende td:first-child,
-tr.checkbox td:first-child { padding-left: 5px; padding-right: 0.5em; }
+tr.checkbox td:first-child { padding-left: 0.1em; padding-right: 0.5em; }
+
+dl.symbol-legende { margin: 0em; padding: 0em; }
+dl.symbol-legende dt { float: left; }
+dl.symbol-legende dd { margin-left: 1em; }
+td.annot dl.symbol-legende { position: absolute; top: -1rem; }
+td.annot dl.symbol-legende dd { margin-bottom: 0.5em; }
 
 tr>.ta-r { text-align: right; }
 
-chapter { display: block; margin-bottom: 2em; }
+tr>.money { text-align: right; white-space: nowrap; }
+tr>.money .numfmt.deci-00 .deci-frac { opacity: 0.33; }
+tr>.money .numfmt.deci-00 .deci-comma { position: relative; }
+tr>.money .numfmt.deci-00 .deci-comma:after {
+  position: absolute; content: "\2014 "; }
+tr>.money .numfmt.deci-00 .deci-digits { visibility: hidden; }
 
-chapter>.signature {
-  margin-top: 100pt;
-  border-top: 1px solid black;
+
+
+
+chapter { display: block; margin-bottom: 0.5em; }
+chapter + chapter { border-top: 1px dotted darkgray; padding-top: 0.5em; }
+
+.signature {
+  width: 100%;
+  max-width: 300pt;
+  min-width: 150pt;
+  margin-top: 50pt;
+  border-top: 0.05mm solid black;
 }
+
+.side-by-side>:first-child { float: left; margin-right: 2em; }
+.side-by-side:after { display: block; content: ""; clear: both; }
+.side-by-side.columns>:first-child { width: 48%; margin-right: 4%; }
+
+
+
 
 
 

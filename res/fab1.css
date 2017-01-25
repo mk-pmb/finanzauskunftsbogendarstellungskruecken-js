@@ -13,6 +13,12 @@ h3 { font-size: 100%; }
 h3, p, table, td, th, chapter { margin: 0em; }
 sup { font-size: 70%; }
 
+.hsep { margin-left: 2ex; }
+.nodisplay { display: none; }
+.nowrap { white-space: nowrap; }
+.ta-r { text-align: right; }
+.va-b { vertical-align: bottom; }
+
 [data-unsupported] { color: brown; background-color: lightsalmon; }
 
 table {
@@ -35,15 +41,13 @@ td.annot { padding-left: 1.5em; width: 10%; position: relative; }
 table, th, td { border-width: 0; }
 
 table.symbol-legende td:first-child,
-tr.checkbox td:first-child { padding-left: 0.1em; padding-right: 0.5em; }
+tr.symbol-checkbox td:first-child { padding-left: 0.1em; padding-right: 0.5em; }
 
 dl.symbol-legende { margin: 0em; padding: 0em; }
 dl.symbol-legende dt { float: left; }
 dl.symbol-legende dd { margin-left: 1em; }
 td.annot dl.symbol-legende { position: absolute; top: -1rem; }
 td.annot dl.symbol-legende dd { margin-bottom: 0.5em; }
-
-tr>.ta-r { text-align: right; }
 
 tr>.money { text-align: right; white-space: nowrap; }
 tr>.money .numfmt.deci-00 .deci-frac { opacity: 0.33; }
@@ -69,6 +73,12 @@ chapter + chapter { border-top: 1px dotted darkgray; padding-top: 0.5em; }
 .side-by-side>:first-child { float: left; margin-right: 2em; }
 .side-by-side:after { display: block; content: ""; clear: both; }
 .side-by-side.columns>:first-child { width: 48%; margin-right: 4%; }
+
+
+
+s[ymb] { text-decoration: none; }
+s[ymb="checkbox-n"]:before { content: "\2610 "; }
+s[ymb="checkbox-y"]:before { content: "\2612 "; }
 
 
 

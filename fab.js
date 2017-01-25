@@ -10,10 +10,11 @@ define(function (require) {
   EX.enchant = function () {
     miscDeco.distributeInnerHtml('.page-title',
       kisi.qsa('title')[0].innerHTML);
-    miscDeco.checkboxRows();
+    miscDeco.symbolRows();
     tabu('thead', tabu.renderCaptions, 'th');
     require('./src/kv-rows').enchant();
     miscDeco.applyColumnClassNames();
+    tabu('dl.symbol-legende', tabu.explainSymbolsByDefListSpec);
     tabu.warnUnprocSpec();
     miscDeco.tableSideAnnot('table+dl.symbol-legende');
     require('css!./res/fab1.css');

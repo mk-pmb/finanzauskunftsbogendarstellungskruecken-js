@@ -3,7 +3,8 @@
   <title>Finanzauskunftsbogen Demo #1</title>
 </head><body>
 
-<chapter><h3 class="page-title"></h3>
+<chapter>
+<h3><span class="page-title"></span>, Demo-Edition</h3>
 
 <table class="key-value" col-cls=""><tbody spec="
   Angaben für: #=Vorname_Nachname
@@ -16,51 +17,75 @@
 
 </chapter>
 
-<chapter><h3>Angaben zur selbstständigen Tätigkeit</h3>
+<chapter>
+<div class="side-by-side columns"><div>
 
+<h3>Angaben zur selbstständigen Tätigkeit</h3>
 <table class="key-value">
-  <tr class="checkbox-y"><td>
-    Ich beschäftige keine Arbeitnehmer.
-    </td><td></td></tr><!--
-  <tr class="checkbox-n"><td>
-    Ich beschäftige Arbeitnehmer länger als drei Monate und mehr
-    als geringfügig (kein Minijob).
-    </td><td>Anzahl:</td></tr>
-  <tr class="checkbox-n"><td class="checkbox-n">
-    Ich beschäftige gleichzeitig mehrere Arbeitnehmer geringfügig,
-    deren Bruttoarbeitsentgelte zusammen monatlich 450¦ überschreiten.
-    </td><td>Anzahl:</td></tr><!--
-  -->
+  <tr symb="checkbox-y">
+    <td>Ich beschäftige keine Arbeitnehmer.</td></tr>
+  <tr symb="checkbox-y">
+    <td>Mein neuester ESt-Bescheid liegt bei.<!--
+  <td>Mein neuester ESt-Bescheid liegt Ihnen vor für 2015.<!--
+  --></td></tr>
 </table>
+
+</div><div>
+
+<table class="key-value" style="max-width: 49%; margin-top: 1em;">
+  <tr symb="checkbox-y"><td>
+    Bitte berechnen Sie meinen verbleibenden Freibetrag für das
+    <s class="hsep"
+      ymb="checkbox-y"></s> vorige
+    <s class="hsep"
+      ymb="checkbox-y"></s> aktuelle
+    <span class="hsep"></span> Kalenderjahr
+    <br>bzw. aktualisieren Sie die Berechnung/en.</td></tr>
+</table>
+
+</div></div>
+
 </chapter>
 
-<table class="key-value" col-cls="| money"><thead spec="
-  Einkommensart | € pro Jahr
-  "></thead><tbody row-data="amountPerTimespan?span=year&prec=2" spec="
+<chapter>
 
-bereits oben aufgeführte    #=siehe_oben
+<table class="key-value" col-cls="| money | money | money">
+  <thead spec="&lt;h3&gt;Weitere Einkommensarten&lt;/h3&gt; | € pro Monat
+    | + € Extras&lt;sup&gt;#&lt;/sup&gt; | somit gesamt ¶ € pro Jahr
+  "></thead><tbody row-data="
+    amountPerTimespan?span=month&prec=2&avgHint=ca.*+
+    monthlyPlusNoBonusEqYear?prec=2&ref_y=(inkl.)
+    smallParensText
+    " spec="
 
-Arbeitslosengeld I                                          y=0
-Kranken-, Übergangs-, Verletztengeld                        y=0
-Eltern-/Mutterschaftsgeld inkl. Arbeitgeberzuschuss         y=0
-Sonstige Entgeltersatzleistungen                            y=0
+Lohn/Gehalt (brutto, inkl. Minijobs)  m=0
+Gesetzliche¹ Renten                   m=0
+Renten aus Versicherungen²      m=0
+Vorruhestandsgeld               m=0
+Ruhegehalt, Beamtenbezüge       m=0
+Sonstige Renten-, Pensions-,¶Versorgungsbezüge    m=0
 
-Arbeitslosengeld II                                         y=0
-Sozialhilfe/-geld                                           y=0
-Grundsicherung im Alter und bei Erwerbsminderung            y=0
+Gewinne³ aus Kapitalvermögen              y<=9000
+Gewinn aus Vermietung/Verpachtung         m=0
+Gewinn aus Land-/Forstwirtschaft          m=23005,42
 
   "></tbody>
 </table>
+<dl class="symbol-legende smallprint" spec="
+  *   &#x2300; pro Monat rechnerisch aus Jahresbetrag
+  #^  Sonder-, Einmal-, Nachzahlungen, Abfindungen, Prämien
+  ¹   z.B. Alters-, Hinterbliebenen-, auch Auslandsr.
+  ²   z.B. Zusatz-, Unfall-, Lebensv.
+  ³   auch steuerfreie
+"></dl>
 
 </chapter>
 
 
 
-<chapter>
+
+
 <div class="signature"><p>Datum, Unterschrift</p></div>
-</chapter>
-
-
 
 <script src="../../amdldr16-pmb/dist/al.js" class="app-init">
   //[["finanzauskunftsbogendarstellungskruecken/fab", "enchant"]]</script>

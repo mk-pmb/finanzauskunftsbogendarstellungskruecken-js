@@ -13,15 +13,17 @@ define(function (require) {
   };
 
 
-  EX.checkboxRows = function () {
-    function cbr(yn, symbol) {
-      kisi.qsa('tr.checkbox-' + yn).forEach(function (tr) {
-        tr.className = tr.className.replace(/^(\w+)/, '$1 $1');
-        tr.insertBefore(kisi.mktag('td'), tr.firstChild).innerHTML = symbol;
+  EX.symbolRows = function () {
+    kisi.qsa('tr[symb]').forEach(function (tr) {
+      var symb = kisi.attrStr(tr, 'symb');
+      kisi.addCls(tr, 'symbol');
+      symb.replace(/^[a-z]+\-/, function (prefix) {
+        kisi.addCls(tr, 'symbol-' + prefix.slice(0, -1));
       });
-    }
-    cbr('n', '\u2610');
-    cbr('y', '\u2612');
+      kisi.addCls(tr, 'symbol-' + symb);
+      tr.insertBefore(kisi.mktag('td'), tr.firstChild
+        ).innerHTML = '<s ymb="' + symb + '"></s>';
+    });
   };
 
 

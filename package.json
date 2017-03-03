@@ -1,5 +1,5 @@
 { "name": "finanzauskunftsbogendarstellungskruecken",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Some JS+CSS magic that help me generate pre-filled printed forms for German bureaucracy.",
   "keywords": [ "bureaucracy" ],
 

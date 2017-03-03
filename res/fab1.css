@@ -56,6 +56,7 @@ tr>.money .numfmt.deci-00 .deci-comma:after {
   position: absolute; content: "\2014 "; }
 tr>.money .numfmt.deci-00 .deci-digits { visibility: hidden; }
 
+tr:hover td { background-color: bisque; }
 
 
 

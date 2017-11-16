@@ -1,6 +1,9 @@
 ﻿@charset "UTF-8";
 /* -*- coding: UTF-8, tab-width: 2 -*- */
 
+@import url("base1.css");
+@import url("symb1.css");
+
 @page {
   size: size: A4 portrait;
   margin: 15mm;
@@ -11,35 +14,10 @@ body, td, th { font-size: 9pt; }
 h3 { font-size: 100%; }
 .smallprint, .smallprint td { font-size: 7pt; }
 h3, p, table, td, th, chapter { margin: 0em; }
-sup { font-size: 70%; }
-
-.hsep { margin-left: 2ex; }
-.nodisplay { display: none; }
-.nowrap { white-space: nowrap; }
-.ta-r { text-align: right; }
-.va-b { vertical-align: bottom; }
 
 [data-unsupported] { color: brown; background-color: lightsalmon; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin-top: 0em;
-  margin-bottom: 0em;
-}
-
-th, td {
-  text-align: left;
-  vertical-align: top;
-  padding: 0.1em;
-  padding-right: 1em;
-}
-th { vertical-align: bottom; font-weight: normal; }
-th:first-child, td:first-child { padding-left: 0; }
-th:last-child, td:last-child, td.last-cell { padding-right: 0; }
 td.annot { padding-left: 1.5em; width: 10%; position: relative; }
-table, th, td { border-width: 0; }
-
 table.symbol-legende td:first-child,
 tr.symbol-checkbox td:first-child { padding-left: 0.1em; padding-right: 0.5em; }
 
@@ -56,9 +34,7 @@ tr>.money .numfmt.deci-00 .deci-comma:after {
   position: absolute; content: "\2014 "; }
 tr>.money .numfmt.deci-00 .deci-digits { visibility: hidden; }
 
-tr:hover td { background-color: bisque; }
-
-
+table.rowhl tr:hover td { background-color: bisque; }
 
 chapter { display: block; margin-bottom: 0.5em; }
 chapter + chapter { border-top: 1px dotted darkgray; padding-top: 0.5em; }
@@ -74,17 +50,6 @@ chapter + chapter { border-top: 1px dotted darkgray; padding-top: 0.5em; }
 .side-by-side>:first-child { float: left; margin-right: 2em; }
 .side-by-side:after { display: block; content: ""; clear: both; }
 .side-by-side.columns>:first-child { width: 48%; margin-right: 4%; }
-
-
-
-s[ymb] { text-decoration: none; }
-s[ymb="checkbox-n"]:before { content: "\2610 "; }
-s[ymb="checkbox-y"]:before { content: "\2612 "; }
-
-
-
-
-
 
 
 

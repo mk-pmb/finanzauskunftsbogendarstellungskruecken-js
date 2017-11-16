@@ -1,0 +1,44 @@
+﻿@charset "UTF-8";
+/* -*- coding: UTF-8, tab-width: 2 -*- */
+
+sup { font-size: 70%; }
+
+.hsep { margin-left: 2ex; }
+.nodisplay { display: none; }
+.nowrap { white-space: nowrap; }
+.ta-r { text-align: right; }
+.va-b { vertical-align: bottom; }
+
+table, th, td { border-width: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.1em;
+  padding-right: 1em;
+}
+th { vertical-align: bottom; font-weight: normal; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child, td.last-cell { padding-right: 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*scroll*/

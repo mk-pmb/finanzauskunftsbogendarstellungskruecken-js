@@ -7,7 +7,7 @@ sup { font-size: 70%; }
 .nodisplay { display: none; }
 .nowrap { white-space: nowrap; }
 .ta-r { text-align: right; }
-.va-b { vertical-align: bottom; }
+.va-b, .va-b td, .va-b th { vertical-align: bottom; }
 
 table, th, td { border-width: 0; }
 
